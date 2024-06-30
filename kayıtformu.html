@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anket Formu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            width: auto;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 15px 20px;
+        }
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="title">Anket Formu</h1>
+    <p id="description">Lütfen aşağıdaki formu doldurunuz.</p>
+
+    <form id="survey-form">
+        <!-- İsim Giriş Alanı -->
+        <label id="name-label" for="name">İsim</label>
+        <input id="name" type="text" name="name" placeholder="İsminizi giriniz" required>
+
+        <!-- E-posta Giriş Alanı -->
+        <label id="email-label" for="email">E-posta</label>
+        <input id="email" type="email" name="email" placeholder="E-posta adresinizi giriniz" required>
+
+        <!-- Sayı Giriş Alanı -->
+        <label id="number-label" for="number">Yaş</label>
+        <input id="number" type="number" name="age" min="1" max="120" placeholder="Yaşınızı giriniz" required>
+
+        <!-- Seçim Kutusu -->
+        <label for="dropdown">Cinsiyet</label>
+        <select id="dropdown" name="gender">
+            <option value="male">Erkek</option>
+            <option value="female">Kadın</option>
+            <option value="other">Diğer</option>
+        </select>
+
+        <!-- Radyo Düğmeleri -->
+        <p>Memnuniyet Düzeyi</p>
+        <label>
+            <input type="radio" name="satisfaction" value="very-satisfied"> Çok Memnun
+        </label>
+        <label>
+            <input type="radio" name="satisfaction" value="satisfied"> Memnun
+        </label>
+        <label>
+            <input type="radio" name="satisfaction" value="neutral"> Nötr
+        </label>
+        <label>
+            <input type="radio" name="satisfaction" value="dissatisfied"> Memnun Değil
+        </label>
+        <label>
+            <input type="radio" name="satisfaction" value="very-dissatisfied"> Çok Memnun Değil
+        </label>
+
+        <!-- Onay Kutuları -->
+        <p>Hangi hizmetlerden memnun kaldınız?</p>
+        <label>
+            <input type="checkbox" name="service" value="quality"> Kalite
+        </label>
+        <label>
+            <input type="checkbox" name="service" value="speed"> Hız
+        </label>
+        <label>
+            <input type="checkbox" name="service" value="price"> Fiyat
+        </label>
+
+        <!-- Metin Alanı -->
+        <label for="comments">Ek Yorumlar</label>
+        <textarea id="comments" name="comments" rows="4" placeholder="Yorumlarınızı buraya yazınız..."></textarea>
+
+        <!-- Gönder Butonu -->
+        <input id="submit" type="submit" value="Gönder">
+    </form>
+
+</body>
+</html>
